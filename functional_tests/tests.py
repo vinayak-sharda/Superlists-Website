@@ -112,6 +112,6 @@ class NewVisitorTest(LiveServerTestCase):
         # Again, there is no sign of Vinayak's list
         page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('Buy Peacock Feathers',page_text)
-        self.assertNotIn('Buy milk',page_text)
+        self.assertIn('Buy milk',page_text)
 
         #Satisfied, they both go back to sleep.
